@@ -1,0 +1,21 @@
+{
+  "name": "iot-industria40-frontend",
+  "version": "1.0.0",
+  "description": "Frontend React para demo IoT Industria 4.0.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "socket.io-client": "^4.8.1",
+    "recharts": "^2.15.0",
+    "lucide-react": "^0.468.0"
+  },
+  "devDependencies": {}
+}

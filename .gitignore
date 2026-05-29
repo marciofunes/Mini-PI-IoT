@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+.DS_Store
+npm-debug.log*
+*.log
+*.err.log
+influxdb/bin/
+influxdb/config/
+influxdb/data/
+influxdb/downloads/
+influxdb/extract/
+influxdb/logs/

@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "author": "Marcio Funes",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard-half",
+      "id": "bb1",
+      "top": 24.9,
+      "left": 492.9,
+      "rotate": 90,
+      "attrs": {}
+    },
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -264.1, "left": 599.8, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 187.2,
+      "left": 433.5,
+      "rotate": 270,
+      "attrs": {}
+    },
+    { "type": "wokwi-servo", "id": "servo5", "top": -59.6, "left": 816, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo6", "top": 26.8, "left": 816, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo7", "top": 113.2, "left": 816, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo8", "top": 199.6, "left": 816, "attrs": {} },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -27.8,
+      "left": 430.7,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": 87.4,
+      "left": 430.7,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": -48,
+      "left": 412.8,
+      "attrs": { "text": "Luminosidade" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": 278.4,
+      "left": 374.4,
+      "attrs": { "text": "Temperatura / Umidade" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text3",
+      "top": 67.2,
+      "left": 432,
+      "attrs": { "text": "Pressão" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "bb1:tn.1", "servo5:GND", "green", [ "v0" ] ],
+    [ "bb1:tn.8", "servo6:GND", "green", [ "h0" ] ],
+    [ "servo7:GND", "bb1:tn.16", "black", [ "h0" ] ],
+    [ "servo8:GND", "bb1:tn.23", "black", [ "h0" ] ],
+    [ "pot1:VCC", "bb1:bp.1", "red", [ "h0" ] ],
+    [ "pot1:GND", "bb1:bn.3", "black", [ "h0" ] ],
+    [ "pot2:VCC", "bb1:bp.11", "red", [ "h0" ] ],
+    [ "pot2:GND", "bb1:bn.13", "black", [ "h0" ] ],
+    [ "dht1:GND", "bb1:bn.21", "black", [ "h0" ] ],
+    [ "dht1:VCC", "bb1:bp.24", "red", [ "h0" ] ],
+    [ "esp:GND.1", "bb1:tn.1", "black", [ "h9.3", "v76.7", "h28.7" ] ],
+    [ "esp:3V3", "bb1:tp.1", "red", [ "h18.9", "v57.6", "h29.1" ] ],
+    [ "esp:GND.2", "bb1:bn.1", "black", [ "v-0.1", "h-9.6", "v76.8", "h-30.1" ] ],
+    [ "esp:3V3", "bb1:bp.1", "red", [ "h18.9", "v57.6", "h-144.9" ] ],
+    [ "servo5:PWM", "esp:D15", "orange", [ "h-19.2", "v-134" ] ],
+    [ "servo6:PWM", "esp:D18", "orange", [ "h-28.8", "v-278.2" ] ],
+    [ "servo7:PWM", "esp:D19", "orange", [ "h-38.4", "v-374.1" ] ],
+    [ "esp:D21", "servo8:PWM", "orange", [ "h66.9", "v470", "h9.6" ] ],
+    [ "pot1:SIG", "esp:D34", "green", [ "h19.2", "v0.4" ] ],
+    [ "pot2:SIG", "esp:D35", "green", [ "h28.8", "v-325.6" ] ],
+    [ "dht1:SDA", "esp:D12", "green", [ "h28.8", "v-0.1" ] ]
+  ],
+  "dependencies": {}
+}

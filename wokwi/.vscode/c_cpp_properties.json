@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "name": "ESP32",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "C:/Users/marcio.funes/AppData/Local/Arduino15/packages/esp32/hardware/esp32/2.0.14/**"
+      ],
+      "defines": [
+        "ESP32",
+        "ARDUINO_ESP32_DEV"
+      ],
+      "compilerPath": "C:/Users/marcio.funes/AppData/Local/Arduino15/packages/esp32/tools/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++",
+      "cStandard": "c11",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}
