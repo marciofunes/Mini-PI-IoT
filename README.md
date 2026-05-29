@@ -5,12 +5,7 @@ Projeto demonstrativo com ESP32 simulado no Wokwi, broker MQTT local, InfluxDB l
 ## Arquitetura
 
 ```text
-Wokwi ESP32 -> Broker MQTT local -> Backend Node.js -> InfluxDB local
-                                  |
-                                  v
-                             Frontend React
-
-Frontend React -> Backend Node.js -> Broker MQTT local -> Wokwi ESP32
+![Arquitetura IoT](docs/diagrama_arquitetura.svg)
 ```
 
 ## Pastas
