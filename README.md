@@ -1,6 +1,6 @@
 # Demo IoT Industria 4.0
 
-Projeto demonstrativo com ESP32 simulado no Wokwi, broker MQTT local, InfluxDB local, backend Node.js e frontend React em tempo real. A ideia e rodar tudo na maquina do aluno, sem depender de broker MQTT ou banco de dados na internet.
+Projeto demonstrativo com ESP32 simulado no Wokwi, broker MQTT local, InfluxDB local, backend Node.js e frontend React em tempo real utilizando apenas o VS Code.
 
 ![Arquitetura IoT](imagens/diagrama_arquitetura.jpg)
 
@@ -50,7 +50,7 @@ Se estiver usando Git Bash no Windows, scripts `.ps1` devem ser executados com `
 ## 1. Clonar o Repositorio
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/marciofunes/Mini-PI-IoT.git
 cd Mini-PI-IoT
 ```
 
