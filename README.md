@@ -44,7 +44,7 @@ Se estiver usando Git Bash no Windows, scripts `.ps1` devem ser executados com `
 ## 1. Clonar o Repositorio
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/marciofunes/Mini-PI-IoT.git
 cd Mini-PI-IoT
 ```
 
