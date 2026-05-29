@@ -14,6 +14,10 @@ Dashboard em tempo real:
 
 ![Dashboard IoT](imagens/tela_dashboard.png)
 
+Simulador online de referencia:
+
+https://wokwi.com/projects/465217495043863553
+
 Simulador ESP32 no Wokwi:
 
 ![Simulador ESP32](imagens/simulador_esp32.png)
@@ -36,6 +40,8 @@ Instale antes de comecar:
 - Git
 - Node.js LTS
 - Python 3
+- VS Code
+- Extensao VS Code: Wokwi Simulator
 - Wokwi CLI
 - Arduino CLI ou o `arduino-cli.exe` que ja esta na pasta `wokwi`
 
@@ -187,6 +193,40 @@ senha: admin
 ```
 
 ### Terminal 5: Wokwi Local
+
+Para usar o Wokwi localmente no VS Code, instale:
+
+- Extensao `Wokwi Simulator` no VS Code
+- Wokwi CLI
+- Arduino CLI ou use o `arduino-cli.exe` que ja esta na pasta `wokwi`
+
+Instale o Wokwi CLI, se ainda nao tiver:
+
+```bash
+npm install -g wokwi-cli
+```
+
+Faca login no Wokwi CLI, se for a primeira vez usando na maquina:
+
+```bash
+wokwi-cli login
+```
+
+O projeto Wokwi usa estas dependencias Arduino, declaradas em `wokwi/libraries.txt`:
+
+```text
+PubSubClient
+ArduinoJson
+DHT sensor library
+ESP32Servo
+```
+
+Ao compilar com `arduino-cli.exe`, instale o core ESP32 se ele ainda nao existir na maquina:
+
+```bash
+./arduino-cli.exe core update-index
+./arduino-cli.exe core install esp32:esp32
+```
 
 Compile o firmware:
 
