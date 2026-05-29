@@ -5,7 +5,7 @@ Projeto demonstrativo com ESP32 simulado no Wokwi, broker MQTT local, InfluxDB l
 ## Arquitetura
 
 ```text
-![Arquitetura IoT](docs/diagrama_arquitetura.svg)
+![Arquitetura IoT](imagens/diagrama_arquitetura.svg)
 ```
 
 ## Pastas
